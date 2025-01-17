@@ -32,6 +32,10 @@ I am always expanding my knowledge! Currently, I am diving into:
 - **Kubernetes** 🚢⚙️  
 - **DevOps Practices** 🛠️🔧  
 
+## 📅 Today's Agenda
+
+**Today, I'm focusing on:** {{ TODAYS_AGENDA }}
+
 ## 📫 Let's Connect!
 
 - **LinkedIn**: [linkedin.com/in/zejun-zhou](https://www.linkedin.com/in/zejun-zhou)  

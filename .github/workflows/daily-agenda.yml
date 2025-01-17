@@ -1,0 +1,32 @@
+name: Daily Agenda Update
+
+on:
+  schedule:
+    - cron: '0 0 * * *' 
+  workflow_dispatch:  
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest  
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3  
+
+      - name: Generate Today's Agenda
+        id: agenda
+        run: |
+          AGENDA_ITEMS=("Data Structures and Algorithms 📊🧠" "Kubernetes 🚢⚙️" "DevOps Practices 🛠️🔧")
+          SELECTED_AGENDA=${AGENDA_ITEMS[$RANDOM % ${#AGENDA_ITEMS[@]}]}
+          echo "TODAYS_AGENDA=$SELECTED_AGENDA" >> $GITHUB_ENV
+
+      - name: Update README.md
+        run: |
+          sed -i "s/{{ TODAYS_AGENDA }}/$TODAYS_AGENDA/g" README.md
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name  "ZejunZhou"
+          git config --global user.email "zejun_zhou@brown.edu"
+          git add README.md
+          git commit -m "Updated Today's Agenda"
+          git push
