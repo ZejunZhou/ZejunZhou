@@ -34,7 +34,7 @@ I am always expanding my knowledge! Currently, I am diving into:
 
 ## 📅 Today's Agenda
 
-**Today, I'm focusing on:** {{ TODAYS_AGENDA }}
+**Today, I'm focusing on:** Data Structures and Algorithms 📊🧠
 
 ## 📫 Let's Connect!
 
