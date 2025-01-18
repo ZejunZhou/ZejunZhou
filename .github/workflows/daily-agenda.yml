@@ -15,12 +15,15 @@ jobs:
       - name: Generate Today's Agenda
         id: agenda
         run: |
+          TODAY=$(date +"%Y-%m-%d")
           AGENDA_ITEMS=("Data Structures and Algorithms 📊🧠" "Kubernetes 🚢⚙️" "DevOps Practices 🛠️🔧")
           SELECTED_AGENDA=${AGENDA_ITEMS[$RANDOM % ${#AGENDA_ITEMS[@]}]}
           echo "TODAYS_AGENDA=$SELECTED_AGENDA" >> $GITHUB_ENV
+          echo "TODAYS_DATE=$TODAY" >> $GITHUB_ENV
 
       - name: Update README.md
         run: |
+          sed -i "s/{{ TODAYS_DATE }}/$TODAYS_DATE/g" README.md
           sed -i "s/{{ TODAYS_AGENDA }}/$TODAYS_AGENDA/g" README.md
 
       - name: Commit and push changes
