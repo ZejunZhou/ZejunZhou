@@ -32,7 +32,7 @@ I am always expanding my knowledge! Currently, I am diving into:
 - **Kubernetes** 🚢⚙️  
 - **DevOps Practices** 🛠️🔧  
 
-## 🗓️ 2025-05-17 Today's Agenda
+## 🗓️ 2025-05-18 Today's Agenda
 
 **Today, I'm focusing on:** Data Structures and Algorithms 📊🧠
 
