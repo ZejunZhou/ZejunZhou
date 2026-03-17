@@ -25,16 +25,15 @@ I am a passionate **Computer Science** graduate student at **Brown University** 
 ![Google Cloud](https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)
 
 
-## 🌱 What I am Currently Learning
+## 📊 Repository Language Stats
 
-I am always expanding my knowledge! Currently, I am diving into:  
-- **Data Structures and Algorithms** 📊🧠  
-- **Kubernetes** 🚢⚙️  
-- **DevOps Practices** 🛠️🔧  
+<!--START_SECTION:waka-->
+```text
+From: - To: -
 
-## 🗓️ 2026-03-17 Today's Agenda
-
-**Today, I'm focusing on:** Data Structures and Algorithms 📊🧠
+Total: - across all repos
+```
+<!--END_SECTION:waka-->
 
 ## 📫 Let's Connect!
 

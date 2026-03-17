@@ -1,0 +1,39 @@
+name: Weekly Repo Summary Update
+
+permissions:
+  contents: write
+
+on:
+  schedule:
+    - cron: '0 0 * * 0'  # Every Sunday at midnight UTC
+  workflow_dispatch:
+
+jobs:
+  update-summary:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Fetch GitHub repo stats and update README
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python .github/scripts/update_github_summary.py
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "ZejunZhou"
+          git config --global user.email "zejun_zhou@brown.edu"
+          git add README.md
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: weekly repo summary update"
+            git push
+          fi
